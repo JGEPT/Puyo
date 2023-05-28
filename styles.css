@@ -31,4 +31,5 @@ html {
 .open:hover,
 .take:hover {
   opacity: 1;
+  cursor:pointer;
 }
