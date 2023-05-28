@@ -8,24 +8,28 @@
     color: #ffffff;
   }
 
-body,
-html {
-  background-image: url(./images/background.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:100%;
-}
+  .bg{
+    width: 1324.5px;
+    height: 619px;
+    position: absolute;
+    object-fit: cover;
+    transform: scale();
+  }
 
 .open {
   opacity: 0;
-  margin-top: 395px;
+  margin-top: 370px;
   margin-left: 510px;
+  position: absolute;
+  transform: scale();
 }
 
 .take {
   opacity: 0;
-  margin-bottom: 123px;
-  margin-left: -100px;
+  margin-top: 247px;
+  margin-left: 728px;
+  position: absolute;
+  transform: scale();
 }
 
 .open:hover,
