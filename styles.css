@@ -8,11 +8,16 @@
     color: #ffffff;
   }
 
-  .bg{
+  .bg, .bgletter{
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
+  }
+
+  .bgletter{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
 
 .open {
@@ -21,6 +26,7 @@
   margin-left: 38.55vw;
   position: absolute;
   transform: scale();
+  transition: opacity 0.1s ease-in-out;
 }
 
 .take {
@@ -29,6 +35,7 @@
   margin-left: 54.5vw;
   position: absolute;
   transform: scale();
+  transition: opacity 0.1s ease-in-out;
 }
 
 .open:hover,
@@ -51,6 +58,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, 100%);
+  transition: opacity 1s ease-in-out;
 }
 
 .lid {
@@ -66,6 +74,7 @@
   border-left: 150px solid transparent;
   transform-origin: top;
   transition: transform 0.25s linear;
+  transition: opacity 1s ease-in-out;
 }
 
 /* Lid when closed */
@@ -75,7 +84,7 @@
   border-top: 100px solid #658ced;
   transform: rotateX(0deg);
   z-index: 3;
-  transition-delay: 0.75s;
+  transition: opacity 1s ease-in-out;
 }
 
 /* Lid when opened */
@@ -85,7 +94,7 @@
   border-top: 100px solid #3760C9;
   transform: rotateX(90deg);
   z-index: 1;
-  transition-delay: 0.5s;
+  transition: opacity 1s ease-in-out;
 }
 
 .envelope {
@@ -101,6 +110,7 @@
   border-bottom: 100px solid #C4DFF0;
   border-left: 150px solid #a4d4f2;
   z-index: 3;
+  transition: opacity 1s ease-in-out;
 }
 
 .letter {
@@ -114,26 +124,28 @@
   border-radius: 15px;
   z-index: 2;
   transition: 0.5s;
+  transition: opacity 1s ease-in-out;
 }
 
 .wrapper:hover .lid.one {
     transform: rotateX(90deg);
-    transition-delay: 0s;
+    transition: transform .5s 0s;
 }
 
 .wrapper.active:hover .lid.two {
     transform: rotateX(180deg);
-    transition-delay: 0.25s;
+    transition: transform .5s 0.35s;
 }
 
 .wrapper.active:hover .letter {
   transform: translateY(-50px);
-  transition-delay: 0.5s;
+  transition: transform .5s 0.50s;
 }
 
 .active{
   opacity: 1;
   pointer-events: all;
+  transition: opacity 1s ease-in-out;
 }
 
 .lid.one.active, .lid.two.active{
@@ -151,38 +163,77 @@
   color: rgba(255, 255, 255, 1);
   cursor: pointer;
   border-radius: 100%;
-  padding: 0rem 0.5rem;
+  padding: 0rem 0rem;
   background-color: rgba(0, 0, 0, 0.2);
   scale: 200%;
+  pointer-events: none;
 }
 
-.carousel-button:hover {
+.carousel-button:hover, .close:hover {
   color: white;
   background-color: rgba(0, 0, 0, 1);
 }
 
 .next,
 .prev {
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
+  padding: 0rem;
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .carousel-button.prev {
-  margin: 3em 9em;
+  margin: 3em 10.5em;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel-button.next {
   opacity: 0;
-  margin: 3em 22em;
+  margin: 3em 21.5em;
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel-button.prev.active {
   opacity: 1;
+  pointer-events: all;
 }
 
 .carousel-button.next.active {
   opacity: 1;
+  pointer-events: all;
+}
+
+.open.active, .take.active{
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.close{
+  position: absolute;
+  scale: 8%;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: 74vw;
+  margin-top: -20vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.close.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nextbutton, .prevbutton{
+  position: absolute;
+  width: 2vw;
+  height: 4vh;
+  margin-top: -1.75vh;
+  margin-left: -1vw;
 }
