@@ -8,6 +8,51 @@
     color: #ffffff;
   }
 
+  .help{
+  position: absolute;
+  scale: 8%;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: 74vw;
+  margin-top: -20vw;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  }
+
+  .close.active{
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .ReadDesc {
+    position: absolute;
+    margin-top: 22vh;
+    margin-left: 40.5vw;
+    font-size: 1.75rem;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
+
+  .ReadDesc.active, .WriteDesc.active{
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  .ReadDesc.activer, .WriteDesc.activer{
+    transition: opacity 0.25s ease-in-out;
+    opacity: 1;
+  }
+
+  .WriteDesc {
+    position: absolute;
+    margin-top: -13vh;
+    margin-left: 66.5vw;
+    font-size: 1.75rem;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
+
   .bg, .bgletter{
     width: 100%;
     height: 100%;
@@ -169,7 +214,7 @@
   pointer-events: none;
 }
 
-.carousel-button:hover, .close:hover {
+.carousel-button:hover, .close:hover, .help:hover {
   color: white;
   background-color: rgba(0, 0, 0, 1);
 }
