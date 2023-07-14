@@ -8,13 +8,14 @@
     <title>Graduation</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
-<audio id="player" autoplay loop>
-  <source src="bgmusic.mp3" type="audio/mp3">
+<audio id="player" autoplay loop onloadstart="this.volume=0.5">
+  <source src="bgmusic.mp3" type="audio/mpeg">
 </audio>
 <body>
     <img src="./images/background.png" class="bg" />
     <img src="./images/backgroundletter.png" class="bgletter" />
     <img src="./images/Help.png" class="help" />
+    <img src="./images/Volume.png" class="volume" />
     <img src="./images/Letters.png" class="open" />
     <img src="./images/Pens.png" class="take" />
     <section aria-label="Newest Photos">
@@ -43,5 +44,9 @@
         </div>
         <p class="ReadDesc">Read your messages</p>
         <p class="WriteDesc">Write a message</p>
+        <div class="container">
+          <div id="number">50</div>
+          <input type="range" min="0" max="100" value="50" id="slider">
+        </div>
 </body>
 </html>

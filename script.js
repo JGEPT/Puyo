@@ -12,6 +12,11 @@ const CloseButton = document.querySelector(".close");
 const ReadDesc = document.querySelector(".ReadDesc");
 const WriteDesc = document.querySelector(".WriteDesc");
 const Help = document.querySelector(".help");
+const Volume = document.querySelector(".volume");
+const Container = document.querySelector(".container");
+let music = document.getElementById("player");
+let slider = document.getElementById("slider");
+let number = document.getElementById("number");
 
 LetterButton.addEventListener("click", () => {
     wrapper.classList.toggle('active');
@@ -26,6 +31,8 @@ LetterButton.addEventListener("click", () => {
     PensButton.classList.toggle('active');
     CloseButton.classList.toggle('active');
     Help.classList.toggle('active');
+    ReadDesc.classList.toggle('hide');
+    WriteDesc.classList.toggle('hide');
 })
 
 LetterButton.addEventListener("mouseover", () => {
@@ -47,7 +54,10 @@ PensButton.addEventListener("mouseout", () => {
 Help.addEventListener("click", () => {
   ReadDesc.classList.toggle('activer');
   WriteDesc.classList.toggle('activer');
+})
 
+Volume.addEventListener("click", () => {
+  Container.classList.toggle('active');
 })
 
 CloseButton.addEventListener("click", () => {
@@ -63,7 +73,14 @@ CloseButton.addEventListener("click", () => {
   PensButton.classList.toggle('active');
   CloseButton.classList.toggle('active');
   Help.classList.toggle('active');
+  ReadDesc.classList.toggle('hide');
+  WriteDesc.classList.toggle('hide');
 })
+
+slider.oninput = function(){
+  number.innerHTML = slider.value;
+  music.volume = (slider.value/100);
+}
 
 const buttons = document.querySelectorAll("[data-carousel-button]")
 

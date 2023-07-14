@@ -8,6 +8,83 @@
     color: #ffffff;
   }
 
+  .volume{
+    position: absolute;
+    scale: 8%;
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 0rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 70vw;
+    margin-top: -20vw;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    }
+  
+  .container{
+    width: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(65%,-50%) rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.75s ease-in-out;
+  }
+
+  .container.active{
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.75s ease-in-out;
+  }
+
+  input[type="range"]{
+    width: 85%;
+    -webkit-appearance:none;
+    height: 5px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+
+  #number{
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 40px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 3px;
+    transform: rotate(90deg);
+    letter-spacing: 1.2px;
+  }
+
+  #number:before{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.85);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    top: -9px;
+  }
+
   .help{
   position: absolute;
   scale: 8%;
@@ -32,15 +109,15 @@
     margin-left: 40.5vw;
     font-size: 1.75rem;
     opacity: 0;
-    transition: opacity 0.25s ease-out;
+    transition: opacity 0.5s ease-out;
   }
 
   .ReadDesc.active, .WriteDesc.active{
-    transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
 
   .ReadDesc.activer, .WriteDesc.activer{
-    transition: opacity 0.25s ease-in-out;
+    transition: opacity 1s ease-in-out;
     opacity: 1;
   }
 
@@ -50,7 +127,7 @@
     margin-left: 66.5vw;
     font-size: 1.75rem;
     opacity: 0;
-    transition: opacity 0.25s ease-out;
+    transition: opacity 0.5s ease-out;
   }
 
   .bg, .bgletter{
@@ -214,7 +291,7 @@
   pointer-events: none;
 }
 
-.carousel-button:hover, .close:hover, .help:hover {
+.carousel-button:hover, .close:hover, .help:hover, .volume:hover {
   color: white;
   background-color: rgba(0, 0, 0, 1);
 }
@@ -250,7 +327,7 @@
   pointer-events: all;
 }
 
-.open.active, .take.active{
+.open.active, .take.active, .volume.active, .help.active{
   pointer-events: none;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -281,4 +358,8 @@
   height: 4vh;
   margin-top: -1.75vh;
   margin-left: -1vw;
+}
+
+.activer.hide{
+  opacity: 0;
 }
