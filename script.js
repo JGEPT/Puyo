@@ -8,12 +8,14 @@ const prev = document.querySelector(".carousel-button.prev");
 const next = document.querySelector(".carousel-button.next");
 const James = document.querySelector(".bgletter")
 const PensButton = document.querySelector(".take");
-const CloseButton = document.querySelector(".close");
+const CloseButton1 = document.querySelector(".close1");
+const CloseButton2 = document.querySelector(".close2");
 const ReadDesc = document.querySelector(".ReadDesc");
 const WriteDesc = document.querySelector(".WriteDesc");
 const Help = document.querySelector(".help");
 const Volume = document.querySelector(".volume");
 const Container = document.querySelector(".container");
+const Message = document.querySelector(".Message");
 let music = document.getElementById("player");
 let slider = document.getElementById("slider");
 let number = document.getElementById("number");
@@ -29,7 +31,7 @@ LetterButton.addEventListener("click", () => {
     James.classList.toggle('active');
     LetterButton.classList.toggle('active');
     PensButton.classList.toggle('active');
-    CloseButton.classList.toggle('active');
+    CloseButton1.classList.toggle('active');
     Help.classList.toggle('active');
     ReadDesc.classList.toggle('hide');
     WriteDesc.classList.toggle('hide');
@@ -60,7 +62,7 @@ Volume.addEventListener("click", () => {
   Container.classList.toggle('active');
 })
 
-CloseButton.addEventListener("click", () => {
+CloseButton1.addEventListener("click", () => {
   wrapper.classList.toggle('active');
   envelope.classList.toggle('active');
   letter.classList.toggle('active');
@@ -71,10 +73,30 @@ CloseButton.addEventListener("click", () => {
   James.classList.toggle('active');
   LetterButton.classList.toggle('active');
   PensButton.classList.toggle('active');
-  CloseButton.classList.toggle('active');
+  CloseButton1.classList.toggle('active');
   Help.classList.toggle('active');
   ReadDesc.classList.toggle('hide');
   WriteDesc.classList.toggle('hide');
+})
+
+PensButton.addEventListener("click", () => {
+  LetterButton.classList.toggle('active');
+  PensButton.classList.toggle('active');
+  CloseButton2.classList.toggle('active');
+  Help.classList.toggle('active');
+  Message.classList.toggle('active');
+  ReadDesc.classList.toggle('hide');
+  WriteDesc.classList.toggle('hide');
+})
+
+CloseButton2.addEventListener("click", () => {
+  LetterButton.classList.toggle('active');
+  PensButton.classList.toggle('active');
+  CloseButton2.classList.toggle('active');
+  Help.classList.toggle('active');
+  ReadDesc.classList.toggle('hide');
+  WriteDesc.classList.toggle('hide');
+  Message.classList.toggle('active');
 })
 
 slider.oninput = function(){

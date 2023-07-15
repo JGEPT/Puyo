@@ -26,7 +26,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(65%,-50%) rotate(-90deg);
+    transform: translate(65.5%,-50%) rotate(-90deg);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -98,7 +98,7 @@
   transition: opacity 1s ease-in-out;
   }
 
-  .close.active{
+  .close1.active, .close2{
     opacity: 1;
     pointer-events: none;
   }
@@ -291,7 +291,7 @@
   pointer-events: none;
 }
 
-.carousel-button:hover, .close:hover, .help:hover, .volume:hover {
+.carousel-button:hover, .close1:hover, .help:hover, .volume:hover, .close2 {
   color: white;
   background-color: rgba(0, 0, 0, 1);
 }
@@ -333,7 +333,7 @@
   transition: opacity 1s ease-in-out;
 }
 
-.close{
+.close1, .close2{
   position: absolute;
   scale: 8%;
   cursor: pointer;
@@ -347,7 +347,7 @@
   transition: opacity 1s ease-in-out;
 }
 
-.close.active{
+.close1.active, .Message.active, .close2.active{
   opacity: 1;
   pointer-events: all;
 }
@@ -360,6 +360,61 @@
   margin-left: -1vw;
 }
 
+.active.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+
 .activer.hide{
   opacity: 0;
+  pointer-events: none;
+}
+
+.Message{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 720px;
+  height: 600px;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  padding: 25px 25px 25px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+#message{
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  width: 670px;
+  height: 420px;
+  padding: 5px 5px 5px 5px;
+}
+
+#Person{
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+label[for=To]{
+  font-size: 25px;
+}
+
+.send{
+  transform: translate(315%,0%);
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 10px 25px 10px 25px;
+  border: 1.75px solid rgba(255, 255, 255, 0.339);
+  cursor: pointer;
+}
+
+.send:hover{
+  background-color: rgba(255, 255, 255, 0.15);
 }

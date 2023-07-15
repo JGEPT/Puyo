@@ -26,7 +26,8 @@
           <button class="carousel-button next" data-carousel-button="next">
             <img src="./images/next.png" class="nextbutton" />
           </button>
-          <img src="./images/Close.png" class="close" />
+          <img src="./images/Close.png" class="close1" />
+          <img src="./images/Close.png" class="close2" />
         <div data-slides> 
             <div class="wrapper" data-active>
             <div class="lid one"></div>
@@ -42,11 +43,49 @@
           </div>
         </div>
         </div>
-        <p class="ReadDesc">Read your messages</p>
-        <p class="WriteDesc">Write a message</p>
-        <div class="container">
-          <div id="number">50</div>
-          <input type="range" min="0" max="100" value="50" id="slider">
+      </section>
+    <p class="ReadDesc">Read your messages</p>
+    <p class="WriteDesc">Write a message</p>
+    <div class="container">
+        <div id="number">50</div>
+        <input type="range" min="0" max="100" value="50" id="slider">
         </div>
+    <div class="Message">
+      <label for="To">To:</label>
+      <select name="Person" id="Person">
+        <option value="James">James</option>
+        <option value="Aira">Aira</option>
+        <option value="Hya">Hya</option>
+        <option value="Raymond">Raymond</option>
+        <option value="Spyke">Spyke</option>
+        <option value="Steph">Steph</option>
+        <option value="Kent">Kent</option>
+        <option value="Andre">Andre</option>
+        <option value="Summi">Summi</option>
+        <option value="Edgiza">Edgiza</option>
+        <option value="Desiree">Desiree</option>
+      </select>
+      <br>
+      <br>
+      <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+      <br>
+      <br>
+      <label for="To">From:</label>
+      <select name="Person" id="Person">
+        <option value="James">James</option>
+        <option value="Aira">Aira</option>
+        <option value="Hya">Hya</option>
+        <option value="Raymond">Raymond</option>
+        <option value="Spyke">Spyke</option>
+        <option value="Steph">Steph</option>
+        <option value="Kent">Kent</option>
+        <option value="Andre">Andre</option>
+        <option value="Summi">Summi</option>
+        <option value="Edgiza">Edgiza</option>
+        <option value="Desiree">Desiree</option>
+        <option value="Anonymous">Anonymous</option>
+      </select>
+      <button class="send">Send</button>
+    </div>
 </body>
 </html>
