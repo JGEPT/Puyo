@@ -16,6 +16,7 @@ const Help = document.querySelector(".help");
 const Volume = document.querySelector(".volume");
 const Container = document.querySelector(".container");
 const Message = document.querySelector(".Message");
+const Start = document.querySelector(".start");
 let music = document.getElementById("player");
 let slider = document.getElementById("slider");
 let number = document.getElementById("number");
@@ -97,6 +98,10 @@ CloseButton2.addEventListener("click", () => {
   ReadDesc.classList.toggle('hide');
   WriteDesc.classList.toggle('hide');
   Message.classList.toggle('active');
+})
+
+Start.addEventListener("click", () => {
+  Start.classList.toggle('hide');
 })
 
 slider.oninput = function(){
