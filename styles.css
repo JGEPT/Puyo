@@ -105,8 +105,8 @@
 
   .ReadDesc {
     position: absolute;
-    margin-top: 22vh;
-    margin-left: 40.5vw;
+    margin-top: 555px;
+    margin-left: 575px;
     font-size: 1.75rem;
     opacity: 0;
     transition: opacity 0.5s ease-out;
@@ -123,8 +123,8 @@
 
   .WriteDesc {
     position: absolute;
-    margin-top: -13vh;
-    margin-left: 66.5vw;
+    margin-top: 330px;
+    margin-left: 910px;
     font-size: 1.75rem;
     opacity: 0;
     transition: opacity 0.5s ease-out;
@@ -146,7 +146,7 @@
 .open {
   opacity: 0;
   margin-top: 60vh;
-  margin-left: 38.55vw;
+  margin-left: 39.55vw;
   position: absolute;
   transform: scale();
   transition: opacity 0.1s ease-in-out;
