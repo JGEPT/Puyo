@@ -24,8 +24,8 @@
   .container{
     width: 80vh;
     position: absolute;
-    margin-top: -100px;
-    margin-left: 978.5px;
+    margin-top: 300px;
+    margin-left: 977.25px;
     transform: rotate(-90deg);
     display: flex;
     align-items: center;
