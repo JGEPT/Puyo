@@ -24,8 +24,8 @@
   .container{
     width: 80vh;
     position: absolute;
-    margin-top: -110px;
-    margin-left: 987.5px;
+    margin-top: -100px;
+    margin-left: 978.5px;
     transform: rotate(-90deg);
     display: flex;
     align-items: center;
@@ -173,14 +173,12 @@
   height: 200px;
   width: 300px;
   background-color: #3760C9;
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 100%);
+  margin: 200px 535px;
   transition: opacity 1s ease-in-out;
 }
 
@@ -305,14 +303,14 @@
 }
 
 .carousel-button.prev {
-  margin: 275px 430px;
+  margin: 275px 455px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
 .carousel-button.next {
   opacity: 0;
-  margin: 275px 855px;
+  margin: 275px 870px;
   transition: opacity 1s ease-in-out;
 }
 
