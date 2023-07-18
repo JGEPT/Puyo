@@ -1,7 +1,6 @@
 const LetterButton = document.querySelector(".open");
 const prev = document.querySelector(".carousel-button.prev");
 const next = document.querySelector(".carousel-button.next");
-const James = document.querySelector(".bgletter")
 const PensButton = document.querySelector(".take");
 const CloseButton1 = document.querySelector(".close1");
 const CloseButton2 = document.querySelector(".close2");
@@ -20,7 +19,6 @@ let number = document.getElementById("number");
 LetterButton.addEventListener("click", () => {
     prev.classList.toggle('active');
     next.classList.toggle('active');
-    James.classList.toggle('active');
     LetterButton.classList.toggle('active');
     PensButton.classList.toggle('active');
     CloseButton1.classList.toggle('active');
@@ -58,7 +56,6 @@ Volume.addEventListener("click", () => {
 CloseButton1.addEventListener("click", () => {
   prev.classList.toggle('active');
   next.classList.toggle('active');
-  James.classList.toggle('active');
   LetterButton.classList.toggle('active');
   PensButton.classList.toggle('active');
   CloseButton1.classList.toggle('active');

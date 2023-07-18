@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
 
 * {
     box-sizing: border-box;
@@ -105,8 +106,8 @@
 
   .ReadDesc {
     position: absolute;
-    margin-top: 555px;
-    margin-left: 575px;
+    margin-top: 545px;
+    margin-left: 568px;
     font-size: 1.75rem;
     opacity: 0;
     transition: opacity 0.5s ease-out;
@@ -123,7 +124,7 @@
 
   .WriteDesc {
     position: absolute;
-    margin-top: 330px;
+    margin-top: 320px;
     margin-left: 910px;
     font-size: 1.75rem;
     opacity: 0;
@@ -138,15 +139,10 @@
     transition: opacity 1s ease-in-out;
   }
 
-  .bgletter{
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
 .open {
   opacity: 0;
-  margin-top: 60vh;
-  margin-left: 39.55vw;
+  margin-top: 60.5vh;
+  margin-left: 39.25vw;
   position: absolute;
   transform: scale();
   transition: opacity 0.1s ease-in-out;
@@ -167,9 +163,9 @@
   cursor:pointer;
 }
 
-.wrapper.james {
-  pointer-events: none;
-  opacity: 0;
+.wrapper.spyke {
+  pointer-events: inherit;
+  opacity: inherit;
   height: 200px;
   width: 300px;
   background-color: #3760C9;
@@ -179,10 +175,9 @@
   align-items: center;
   z-index: 0;
   margin: 200px 535px;
-  transition: opacity 0.5s ease-in-out;
 }
 
-.lid.james {
+.lid.spyke {
   pointer-events: inherit;
   opacity: inherit;
   position: absolute;
@@ -198,7 +193,7 @@
 }
 
 /* Lid when closed */
-.lid.one.james {
+.lid.one.spyke {
   opacity: inherit;
   pointer-events: inherit;
   border-top: 100px solid #658ced;
@@ -208,7 +203,7 @@
 }
 
 /* Lid when opened */
-.lid.two.james {
+.lid.two.spyke {
   opacity: inherit;
   pointer-events: inherit;
   border-top: 100px solid #3760C9;
@@ -217,7 +212,7 @@
   transition-delay: 0.5s;
 }
 
-.envelope.james {
+.envelope.spyke {
   pointer-events: inherit;
   opacity: inherit;
   position: absolute;
@@ -232,7 +227,7 @@
   z-index: 3;
 }
 
-.letter.james {
+.letter.spyke {
   pointer-events: inherit;
   opacity: inherit;
   position: absolute;
@@ -245,19 +240,22 @@
   transition: 0.5s;
 }
 
+.name.spyke{
+  margin-left: 574px;
+}
+
 .wrapper.aira {
-  pointer-events: none;
-  opacity: 0;
+  pointer-events: inherit;
+  opacity: inherit;
   height: 200px;
   width: 300px;
-  background-color: #48c937;
+  background-color: #69ed65;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 0;
   margin: 200px 535px;
-  transition: opacity 0.5s ease-in-out;
 }
 
 .lid.aira {
@@ -289,7 +287,7 @@
 .lid.two.aira {
   opacity: inherit;
   pointer-events: inherit;
-  border-top: 100px solid #37c95e;
+  border-top: 100px solid #69ed65;
   transform: rotateX(90deg);
   z-index: 1;
   transition-delay: 0.5s;
@@ -321,6 +319,91 @@
   border-radius: 15px;
   z-index: 2;
   transition: 0.5s;
+}
+
+.name.aira{
+  margin-left: 591px;
+}
+
+.wrapper.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #ed65e6;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.summi {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #ed65e6;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.summi {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #ed65e6;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #f5bcef;
+  border-bottom: 100px solid #f5bcef;
+  border-left: 150px solid #e59be9;
+  z-index: 3;
+}
+
+.letter.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.summi{
+  margin-left: 548px;
 }
 
 .wrapper:hover .lid.one {
@@ -487,7 +570,33 @@ label[for=To]{
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.wrapper[data-active] {
+.letterbg[data-active] {
   opacity: 1;
   pointer-events: all;
+  transition: opacity 1s ease-in-out;
+}
+
+.letterbg {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.name{
+  position: absolute;
+  font-size: 100px;
+  margin-top: 400px;
+  font-family: 'Norican', cursive;
+}
+
+.name.spyke{
+  margin-left: 574px;
+}
+
+.name.aira{
+  margin-left: 591px;
+}
+
+.name.summi{
+  margin-left: 548px;
 }

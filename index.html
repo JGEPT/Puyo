@@ -19,12 +19,9 @@
 </audio>
 <body>
     <img src="./images/background.png" class="bg" />
-    <img src="./images/backgroundletter.png" class="bgletter" />
     <img src="./images/Letters.png" class="open" />
     <img src="./images/Pens.png" class="take" />
-    <img src="./images/Help.png" class="help" />
     <img src="./images/Start.png" class="start" />
-    <img src="./images/Volume.png" class="volume" />
     <section aria-label="Newest Photos">
         <div class="carousel" data-carousel>
           <button class="carousel-button prev" data-carousel-button="prev">
@@ -33,21 +30,37 @@
           <button class="carousel-button next" data-carousel-button="next">
             <img src="./images/next.png" class="nextbutton" />
           </button>
-          <img src="./images/Close.png" class="close1" />
-          <img src="./images/Close.png" class="close2" />
-        <div data-slides> 
-            <div class="wrapper james">
-              <div class="lid one james"></div>
-              <div class="lid two james"></div>
-              <div class="envelope james"></div>
-              <div class="letter james"></div>
+        <div data-slides>
+          <div class="letterbg spyke">
+            <img src="./images/spyke.png" class="bgletter" />
+            <div class="wrapper spyke">
+              <div class="lid one spyke"></div>
+              <div class="lid two spyke"></div>
+              <div class="envelope spyke"></div>
+              <div class="letter spyke"></div>
           </div>
-          <div class="wrapper aira">
+          <p class="name spyke">Spyke</p>
+          </div>
+          <div class="letterbg aira">
+            <img src="./images/Aira.png" class="bgletter" />
+            <div class="wrapper aira">
               <div class="lid one aira"></div>
               <div class="lid two aira"></div>
               <div class="envelope aira"></div>
               <div class="letter aira"></div>
           </div>
+          <p class="name aira">Aira</p>
+          </div>
+          <div class="letterbg summi">
+            <img src="./images/Summi.png" class="bgletter" />
+            <div class="wrapper summi">
+              <div class="lid one summi"></div>
+              <div class="lid two summi"></div>
+              <div class="envelope summi"></div>
+              <div class="letter summi"></div>
+          </div>
+          <p class="name summi">Summi</p>
+          </div> 
         </div>
         </div>
       </section>
@@ -60,7 +73,7 @@
     <div class="Message">
       <label for="To">To:</label>
       <select name="Person" id="Person">
-        <option value="James">James</option>
+        <option value="spyke">spyke</option>
         <option value="Aira">Aira</option>
         <option value="Hya">Hya</option>
         <option value="Raymond">Raymond</option>
@@ -79,7 +92,7 @@
       <br>
       <label for="To">From:</label>
       <select name="Person" id="Person">
-        <option value="James">James</option>
+        <option value="spyke">spyke</option>
         <option value="Aira">Aira</option>
         <option value="Hya">Hya</option>
         <option value="Raymond">Raymond</option>
@@ -94,5 +107,9 @@
       </select>
       <button class="send">Send</button>
     </div>
+    <img src="./images/Help.png" class="help" />
+    <img src="./images/Close.png" class="close1" />
+    <img src="./images/Close.png" class="close2" />
+    <img src="./images/Volume.png" class="volume" />
 </body>
 </html>
