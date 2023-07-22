@@ -1,0 +1,1158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    color: #ffffff;
+  }
+
+  .volume{
+    position: absolute;
+    scale: 8%;
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 0rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 928.5px;
+    margin-top: -264px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    }
+  
+  .container{
+    width: 80vh;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 989px;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.75s ease-in-out;
+  }
+
+  .container.active{
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.75s ease-in-out;
+  }
+
+  input[type="range"]{
+    width: 85%;
+    -webkit-appearance:none;
+    height: 5px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+
+  #number{
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 40px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 3px;
+    transform: rotate(90deg);
+    letter-spacing: 1.2px;
+  }
+
+  #number:before{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.85);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    top: -9px;
+  }
+
+  .help{
+  position: absolute;
+  scale: 8%;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: 980.5px;
+  margin-top: -264px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  }
+
+  .close1.active, .close2{
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .ReadDesc {
+    position: absolute;
+    margin-top: 545px;
+    margin-left: 568px;
+    font-size: 1.75rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+
+  .ReadDesc.active, .WriteDesc.active{
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .ReadDesc.activer, .WriteDesc.activer{
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+  }
+
+  .WriteDesc {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 910px;
+    font-size: 1.75rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+
+  .bg, .bgletter, .start{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+  }
+
+.open {
+  opacity: 0;
+  margin-top: 60.5vh;
+  margin-left: 39.25vw;
+  position: absolute;
+  transform: scale();
+  transition: opacity 0.1s ease-in-out;
+}
+
+.take {
+  opacity: 0;
+  margin-top: 39vh;
+  margin-left: 54.5vw;
+  position: absolute;
+  transform: scale();
+  transition: opacity 0.1s ease-in-out;
+}
+
+.open:hover,
+.take:hover {
+  opacity: 1;
+  cursor:pointer;
+}
+
+.wrapper.spyke {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #3760C9;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.spyke {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.spyke {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #658ced;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.spyke {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #3760C9;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.spyke {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #C4DFF0;
+  border-bottom: 100px solid #C4DFF0;
+  border-left: 150px solid #a4d4f2;
+  z-index: 3;
+}
+
+.letter.spyke {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.spyke{
+  margin-left: 574px;
+}
+
+.wrapper.aira {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #69ed65;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.aira {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.aira {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #69ed65;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.aira {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #69ed65;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.aira {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #e6f5bc;
+  border-bottom: 100px solid #e6f5bc;
+  border-left: 150px solid #d3e99b;
+  z-index: 3;
+}
+
+.letter.aira {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.aira{
+  margin-left: 591px;
+}
+
+.wrapper.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #ed65e6;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.summi {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #ed65e6;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.summi {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #ed65e6;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #f5bcef;
+  border-bottom: 100px solid #f5bcef;
+  border-left: 150px solid #e59be9;
+  z-index: 3;
+}
+
+.letter.summi {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.summi{
+  margin-left: 548px;
+}
+
+.wrapper.edg {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #a265ed;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.edg {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.edg {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #a265ed;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.edg {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #a265ed;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.edg {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #dabcf5;
+  border-bottom: 100px solid #dabcf5;
+  border-left: 150px solid #ce9be9;
+  z-index: 3;
+}
+
+.letter.edg {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.edg{
+  margin-left: 548px;
+}
+
+.wrapper.steph {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #eddd65;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.steph {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.steph {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #eddd65;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.steph {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #eddd65;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.steph {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #f5e8bc;
+  border-bottom: 100px solid #f5e8bc;
+  border-left: 150px solid #e9e39b;
+  z-index: 3;
+}
+
+.letter.steph {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.steph{
+  margin-left: 576.5px;
+}
+
+.wrapper.raymond {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #ed6565;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.raymond {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.raymond {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #ed6565;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.raymond {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #ed6565;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.raymond {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #f5c1bc;
+  border-bottom: 100px solid #f5c1bc;
+  border-left: 150px solid #e9b99b;
+  z-index: 3;
+}
+
+.letter.raymond {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.raymond{
+  margin-left: 495px;
+}
+
+.wrapper.hya {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #262323;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.hya {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.hya {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #262323;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.hya {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #262323;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.hya {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #3b3b3b;
+  border-bottom: 100px solid #3b3b3b;
+  border-left: 150px solid #313131;
+  z-index: 3;
+}
+
+.letter.hya {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.hya{
+  margin-left: 595px;
+}
+
+.wrapper.andre {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #eddd65;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.andre {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.andre {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #eddd65;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.andre {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #eddd65;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.andre {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #f5e8bc;
+  border-bottom: 100px solid #f5e8bc;
+  border-left: 150px solid #e9e39b;
+  z-index: 3;
+}
+
+.letter.andre {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.andre{
+  margin-left: 565.75px;
+}
+
+.wrapper.desiree {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #908686;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.desiree {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.desiree {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #908686;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.desiree {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #908686;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.desiree {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #c3b1b1;
+  border-bottom: 100px solid #c3b1b1;
+  border-left: 150px solid #ae9e9e;
+  z-index: 3;
+}
+
+.letter.desiree {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.desiree {
+  margin-left: 542.5px;
+}
+
+.wrapper.kent {
+  pointer-events: inherit;
+  opacity: inherit;
+  height: 200px;
+  width: 300px;
+  background-color: #9d602b;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin: 200px 535px;
+}
+
+.lid.kent {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one.kent {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #9d602b;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two.kent {
+  opacity: inherit;
+  pointer-events: inherit;
+  border-top: 100px solid #9d602b;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope.kent {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #ce8342;
+  border-bottom: 100px solid #ce8342;
+  border-left: 150px solid #ba773c;
+  z-index: 3;
+}
+
+.letter.kent {
+  pointer-events: inherit;
+  opacity: inherit;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.name.kent {
+  margin-left: 580px;
+}
+
+.wrapper:hover .lid.one {
+    transform: rotateX(90deg);
+    transition-delay: 0s;
+}
+
+.wrapper:hover .lid.two {
+    transform: rotateX(180deg);
+    transition-delay: 0.25s;
+}
+
+.wrapper:hover .letter {
+  transform: translateY(-50px);
+  transition-delay: 0.5s;
+}
+
+.active{
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0rem 0rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  scale: 200%;
+  pointer-events: none;
+}
+
+.carousel-button:hover, .close1:hover, .help:hover, .volume:hover, .close2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.next,
+.prev {
+  width: 1em;
+  height: 1em;
+  padding: 0rem;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button.prev {
+  margin: 275px 455px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-button.next {
+  opacity: 0;
+  margin: 275px 870px;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-button.prev.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.carousel-button.next.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.open.active, .take.active, .volume.active, .help.active{
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.close1, .close2{
+  position: absolute;
+  scale: 8%;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: 980.5px;
+  margin-top: -264px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.close1.active, .Message.active, .close2.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nextbutton, .prevbutton{
+  position: absolute;
+  width: 2vw;
+  height: 4vh;
+  margin-top: -1.75vh;
+  margin-left: -1vw;
+}
+
+.active.hide, .hide{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.activer.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Message{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 720px;
+  height: 600px;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  padding: 25px 25px 25px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+#message{
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  width: 670px;
+  height: 420px;
+  padding: 5px 5px 5px 5px;
+}
+
+#Person{
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+label[for=To]{
+  font-size: 25px;
+}
+
+.send{
+  transform: translate(315%,0%);
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 10px 25px 10px 25px;
+  border: 1.75px solid rgba(255, 255, 255, 0.339);
+  cursor: pointer;
+}
+
+.send:hover{
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.letterbg[data-active] {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 1s ease-in-out;
+}
+
+.letterbg {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.name{
+  position: absolute;
+  font-size: 100px;
+  margin-top: 400px;
+  font-family: 'Norican', cursive;
+}
+

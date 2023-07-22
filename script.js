@@ -12,6 +12,20 @@ const Container = document.querySelector(".container");
 const Message = document.querySelector(".Message");
 const Start = document.querySelector(".start");
 const Current = document.querySelector("[data-slides]");
+const James = document.querySelector(".wrapper.james");
+const Aira = document.querySelector(".wrapper.aira");
+const Summi = document.querySelector(".wrapper.summi");
+const Spyke = document.querySelector(".wrapper.spyke");
+const Steph = document.querySelector(".wrapper.steph");
+const Edgiza = document.querySelector(".wrapper.edgiza");
+const Raymond = document.querySelector(".wrapper.Raymond");
+const Andre = document.querySelector(".wrapper.andre");
+const Kent = document.querySelector(".wrapper.kent");
+const Desiree = document.querySelector(".wrapper.desiree");
+const Hya = document.querySelector(".wrapper.hya");
+const PassPrompt = document.querySelector(".passprompt")
+
+
 let music = document.getElementById("player");
 let slider = document.getElementById("slider");
 let number = document.getElementById("number");
@@ -112,4 +126,52 @@ buttons.forEach(button => {
     slides.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
   })
+})
+
+James.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Aira.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Summi.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Spyke.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Steph.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Edgiza.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Raymond.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Andre.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Kent.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+Desiree.addEventListener("click", () => {
+  PassPrompt.classList.toggle('active');
+})
+
+James.addEventListener("click", () => {
+  PassPrompt.classList.toggle('hide');
+})
+
+Hya.addEventListener("click", () => {
+  PassPrompt.classList.toggle('hide');
 })
