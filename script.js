@@ -130,59 +130,72 @@ buttons.forEach(button => {
   })
 })
 
+let owner;
+
 James.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "Surely";
+  owner = "James";
 })
 
 Aira.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "test1";
+  owner = "Aira";
 })
 
 Summi.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "test2";
+  owner = "Summi";
 })
 
 Spyke.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "test3";
+  owner = "Spyke";
 })
 
 Steph.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test";
+  owner = "Steph";
 })
 
 Edgiza.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test";
+  owner = "Steph";
 })
 
 Raymond.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test";
+  owner = "Raymond";
 })
 
 Andre.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test";
+  owner = "Andre";
 })
 
 Kent.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test";
+  owner = "Kent";
 })
 
 Desiree.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test";
+  owner = "Desiree";
 })
 
 Hya.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test";
+  owner = "Hya";
 })
 
 function submitForm(event){
@@ -193,8 +206,8 @@ function submitForm(event){
          return false
        }
   if(document.getElementById('password').value === password);{
-         alert('You may proceed');
-         console.log('You may proceed');
+         const MessageList = document.querySelector(".messagelist");
+         MessageList.classList.add("active");
        }
    }
 

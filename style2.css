@@ -1252,7 +1252,7 @@ label[for=To]{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,300%);
   width: 510px;
   height: 75px;
   z-index: 5;
@@ -1277,6 +1277,34 @@ label[for=password]{
 }
 
 .passprompt.active{
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: all;
+}
+
+.messagelist{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 475px;
+  height: 600px;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.90);
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.ListHeader{
+  font-size:32px;
+  color: black;
+  border-bottom: 2.75px solid black;
+}
+
+.messagelist.active{
   opacity: 1;
   transition: opacity 1s ease-in-out;
   pointer-events: all;
