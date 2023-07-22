@@ -164,6 +164,7 @@
 }
 
 .wrapper.spyke {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -245,6 +246,7 @@
 }
 
 .wrapper.aira {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -326,6 +328,7 @@
 }
 
 .wrapper.summi {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -407,6 +410,7 @@
 }
 
 .wrapper.edg {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -488,6 +492,7 @@
 }
 
 .wrapper.steph {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -569,6 +574,7 @@
 }
 
 .wrapper.raymond {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -650,6 +656,7 @@
 }
 
 .wrapper.hya {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -731,6 +738,7 @@
 }
 
 .wrapper.andre {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -812,6 +820,7 @@
 }
 
 .wrapper.desiree {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -893,6 +902,7 @@
 }
 
 .wrapper.kent {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -1155,7 +1165,37 @@ label[for=To]{
   margin-top: 400px;
   font-family: 'Norican', cursive;
 }
-<<<<<<<< HEAD:styles1.css
-========
 
->>>>>>>> 9f033eb8e392685238a7ffc040b02371700c4dc2:style1.css
+.passprompt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,300%);
+  width: 510px;
+  height: 75px;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.80);
+  border-radius: 10px;
+  padding: 25px 25px 25px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out; 
+}
+
+label[for=password]{
+  font-size: 25px;
+}
+
+#password{
+  background-color: rgba(0, 0, 0, 0.65);
+  border-color: #313131;
+  border: 1.75px solid rgba(255, 255, 255, 0.339);
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.passprompt.active{
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: all;
+}

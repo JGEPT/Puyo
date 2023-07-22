@@ -164,6 +164,7 @@
 }
 
 .wrapper.spyke {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -245,6 +246,7 @@
 }
 
 .wrapper.aira {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -326,6 +328,7 @@
 }
 
 .wrapper.summi {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -407,6 +410,7 @@
 }
 
 .wrapper.edg {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -488,6 +492,7 @@
 }
 
 .wrapper.steph {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -569,6 +574,7 @@
 }
 
 .wrapper.raymond {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -650,6 +656,7 @@
 }
 
 .wrapper.hya {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -731,6 +738,7 @@
 }
 
 .wrapper.andre {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -812,6 +820,7 @@
 }
 
 .wrapper.desiree {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -893,6 +902,7 @@
 }
 
 .wrapper.kent {
+  cursor: pointer;
   pointer-events: inherit;
   opacity: inherit;
   height: 200px;
@@ -974,6 +984,7 @@
 }
 
 .wrapper.james {
+    cursor: pointer;
     pointer-events: inherit;
     opacity: inherit;
     height: 200px;
@@ -1248,7 +1259,7 @@ label[for=To]{
   background-color: rgba(0, 0, 0, 0.65);
   border-radius: 10px;
   padding: 25px 25px 25px 25px;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: opacity 1s ease-in-out; 
 }
@@ -1259,7 +1270,14 @@ label[for=password]{
 
 #password{
   background-color: rgba(0, 0, 0, 0.65);
+  border-color: #313131;
+  border: 1.75px solid rgba(255, 255, 255, 0.339);
   border-radius: 10px;
   font-size: 25px;
-  cursor: pointer;
+}
+
+.passprompt.active{
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: all;
 }

@@ -17,18 +17,19 @@ const Aira = document.querySelector(".wrapper.aira");
 const Summi = document.querySelector(".wrapper.summi");
 const Spyke = document.querySelector(".wrapper.spyke");
 const Steph = document.querySelector(".wrapper.steph");
-const Edgiza = document.querySelector(".wrapper.edgiza");
-const Raymond = document.querySelector(".wrapper.Raymond");
+const Edgiza = document.querySelector(".wrapper.edg");
+const Raymond = document.querySelector(".wrapper.raymond");
 const Andre = document.querySelector(".wrapper.andre");
 const Kent = document.querySelector(".wrapper.kent");
 const Desiree = document.querySelector(".wrapper.desiree");
 const Hya = document.querySelector(".wrapper.hya");
-const PassPrompt = document.querySelector(".passprompt")
-
-
+const PassPrompt = document.querySelector(".passprompt");
+const passform = document.getElementById("passform");
 let music = document.getElementById("player");
 let slider = document.getElementById("slider");
 let number = document.getElementById("number");
+let password;
+
 
 LetterButton.addEventListener("click", () => {
     prev.classList.toggle('active');
@@ -125,53 +126,76 @@ buttons.forEach(button => {
 
     slides.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
+    PassPrompt.classList.remove('active');
   })
 })
 
 James.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "Surely";
 })
 
 Aira.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Summi.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Spyke.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Steph.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Edgiza.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Raymond.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Andre.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Kent.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
+  password = "test";
 })
 
 Desiree.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-})
-
-James.addEventListener("click", () => {
-  PassPrompt.classList.toggle('hide');
+  password = "test";
 })
 
 Hya.addEventListener("click", () => {
-  PassPrompt.classList.toggle('hide');
+  PassPrompt.classList.toggle('active');
+  password = "test";
 })
+
+function submitForm(event){
+  event.preventDefault();
+  if(document.getElementById('password').value !== password){
+       alert('Wrong Password');
+       console.log('Wrong Password');
+         return false
+       }
+  if(document.getElementById('password').value === password);{
+         alert('You may proceed');
+         console.log('You may proceed');
+       }
+   }
+
+passform.addEventListener('submit', submitForm);
