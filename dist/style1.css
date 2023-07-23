@@ -1327,7 +1327,9 @@ label[for=password]{
 .datacol{
   display: flex;
   border-bottom: 2.75px solid black;
+  justify-content: space-between;
   cursor: pointer;
+  pointer-events: all;
 }
 
 .letternumlabel, .senderlabel, .Datelabel, .letternum, .sender, .Date{
@@ -1335,20 +1337,8 @@ label[for=password]{
   font-size: 20px;
 }
 
-.senderlabel{
-  margin-left: 50px;
-}
-
 .Datelabel{
-  margin-left: 248px;
-}
-
-.sender{
-  margin-left: 55px;
-}
-
-.Date{
-  margin-left: 215px;
+  margin-left: 310px;
 }
 
 .datacol:hover{
@@ -1413,6 +1403,7 @@ label[for=From]{
     margin-top: -287.5px;
     opacity: 1;
     transition: opacity 1s ease-in-out;
+    pointer-events: all;
 }
 
 .back:hover{
@@ -1430,6 +1421,7 @@ label[for=From]{
     margin-top: -345px;
     opacity: 1;
     transition: opacity 1s ease-in-out;
+    pointer-events: all;
 }
 
 .backmessage:hover{
