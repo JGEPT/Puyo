@@ -1,3 +1,40 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { 
+  getFirestore,
+  collection,
+  getDocs
+} from 'firebase/firestore'
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC5NpXn6fMDQzUjiTIBebUn_7r9hcaqpuY",
+  authDomain: "puyo-cbb18.firebaseapp.com",
+  projectId: "puyo-cbb18",
+  storageBucket: "puyo-cbb18.appspot.com",
+  messagingSenderId: "1016111692864",
+  appId: "1:1016111692864:web:caf62e1b638c971a0eb3a5",
+  measurementId: "G-HRKQ0C8GFL"
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+const db = getFirestore();
+const messageref = collection(db, 'MessageSpyke')
+
+getDocs(messageref).then((snapshot) =>{
+  let MessageData = []
+  snapshot.docs.forEach((doc) => {
+    MessageData.push ({...doc.data(), id: doc.id})
+  })
+  console.log(MessageData)
+}) .catch(err => {
+  console.log(err.message);
+})
+
 const LetterButton = document.querySelector(".open");
 const prev = document.querySelector(".carousel-button.prev");
 const next = document.querySelector(".carousel-button.next");
