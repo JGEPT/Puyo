@@ -1188,7 +1188,7 @@
   width: 720px;
   height: 600px;
   z-index: 5;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 25px 25px 25px 25px;
   opacity: 0;
@@ -1197,36 +1197,40 @@
 }
 
 #message{
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(221, 221, 221, 0.595);
   border-radius: 10px;
   width: 670px;
   height: 420px;
   padding: 5px 5px 5px 5px;
+  color: black;
 }
 
 #Person{
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(221, 221, 221, 0.595);
   border-radius: 10px;
   font-size: 25px;
   cursor: pointer;
+  color: black
 }
 
 label[for=To]{
   font-size: 25px;
+  color: black;
 }
 
 .send{
   transform: translate(315%,0%);
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(221, 221, 221, 0.595);
   border-radius: 10px;
   font-size: 25px;
   padding: 10px 25px 10px 25px;
-  border: 1.75px solid rgba(255, 255, 255, 0.339);
+  border: 1.75px solid rgba(0, 0, 0, 0.339);
   cursor: pointer;
+  color: black;
 }
 
 .send:hover{
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .letterbg[data-active] {
@@ -1349,6 +1353,7 @@ label[for=password]{
 
 label[for=From]{
   font-size: 25px;
+  color: black;
 }
 
 .From, .To{

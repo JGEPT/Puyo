@@ -25,6 +25,7 @@ const Desiree = document.querySelector(".wrapper.desiree");
 const Hya = document.querySelector(".wrapper.hya");
 const PassPrompt = document.querySelector(".passprompt");
 const passform = document.getElementById("passform");
+const MessageList = document.querySelector(".messagelist");
 let music = document.getElementById("player");
 let slider = document.getElementById("slider");
 let number = document.getElementById("number");
@@ -79,6 +80,7 @@ CloseButton1.addEventListener("click", () => {
   WriteDesc.classList.toggle('hide');
   const activeSlide = Current.querySelector("[data-active]");
   delete activeSlide.dataset.active;
+  PassPrompt.classList.remove('active');
 })
 
 PensButton.addEventListener("click", () => {
@@ -99,6 +101,7 @@ CloseButton2.addEventListener("click", () => {
   ReadDesc.classList.toggle('hide');
   WriteDesc.classList.toggle('hide');
   Message.classList.toggle('active');
+  PassPrompt.classList.remove('active');
 })
 
 Start.addEventListener("click", () => {
@@ -206,16 +209,28 @@ function submitForm(event){
          return false
        }
   if(document.getElementById('password').value === password);{
-         const MessageList = document.querySelector(".messagelist");
          MessageList.classList.add("active");
        }
    }
 
 passform.addEventListener('submit', submitForm);
 
-const LetterData = document.querySelector(".datacol")
-const readmessage = document.querySelector(".readmessage")
+const LetterData = document.querySelector(".datacol");
+const readmessage = document.querySelector(".readmessage");
 
 LetterData.addEventListener("click", () => {
   readmessage.classList.add('active');
+})
+
+const backbutton = document.querySelector(".back");
+
+backbutton.addEventListener("click", () => {
+  MessageList.classList.remove('active');
+  PassPrompt.classList.remove('active');
+})
+
+const backmessagebutton = document.querySelector(".backmessage");
+
+backmessagebutton.addEventListener("click", () => {
+  readmessage.classList.remove('active');
 })
