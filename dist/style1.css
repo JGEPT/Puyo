@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
     font-family: "Outfit", sans-serif;
-    color: #ffffff;
+    color: black;
   }
 
   .volume{
@@ -112,6 +112,7 @@
     font-size: 1.75rem;
     opacity: 0;
     transition: opacity 0.5s ease-out;
+    color: white
   }
 
   .ReadDesc.active, .WriteDesc.active{
@@ -130,6 +131,7 @@
     font-size: 1.75rem;
     opacity: 0;
     transition: opacity 0.5s ease-out;
+    color: white;
   }
 
   .bg, .bgletter, .start{
@@ -1206,12 +1208,12 @@
   color: black;
 }
 
-#Person{
+#PersonTo, .option, .select, #PersonFrom{
   background-color: rgba(221, 221, 221, 0.595);
   border-radius: 10px;
   font-size: 25px;
   cursor: pointer;
-  color: black
+  color: black;
 }
 
 label[for=To]{
@@ -1427,4 +1429,8 @@ label[for=From]{
 
 .backmessage:hover{
   background-color: rgba(182, 182, 182, 0.545);
+}
+
+.name{
+  color: white;
 }

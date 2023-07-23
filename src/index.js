@@ -28,6 +28,8 @@ const passform = document.getElementById("passform");
 const MessageList = document.querySelector(".messagelist");
 const readmessage = document.querySelector(".readmessage");
 const info = document.querySelector(".info");
+const messageform = document.getElementById("messageform");
+const backbutton = document.querySelector(".back");
 let music = document.getElementById("player");
 let slider = document.getElementById("slider");
 let number = document.getElementById("number");
@@ -38,7 +40,10 @@ import { initializeApp } from "firebase/app";
 import { 
   getFirestore,
   collection,
-  getDocs
+  getDocs,
+  getDoc,
+  addDoc,
+  doc,
 } from 'firebase/firestore'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -58,7 +63,22 @@ const firebaseConfig = {
 // Initialize Firebase
 initializeApp(firebaseConfig);
 const db = getFirestore();
+const messagehyaref = collection(db, 'MessageHya');
+const messagejamesref = collection(db, 'MessageJames');
+const messageairaref = collection(db, 'MessageAira');
+const messagesummiref = collection(db, 'MessageSummi');
+const messagespykeref = collection(db, 'MessageSpyke');
+const messagestephref = collection(db, 'MessageSteph');
+const messageedgizaref = collection(db, 'MessageEdg');
+const messageraymondref = collection(db, 'MessageRaymond');
+const messageandreref = collection(db, 'MessageAndre');
+const messagekentref = collection(db, 'MessageKent');
+const messagedesireeref = collection(db, 'MessageDesiree');
 
+function getCurrentDateAndTime() {
+  const dateTime = new Date();
+  return dateTime.toLocaleDateString();
+}
 
 LetterButton.addEventListener("click", () => {
     prev.classList.toggle('active');
@@ -121,6 +141,9 @@ PensButton.addEventListener("click", () => {
   Message.classList.toggle('active');
   ReadDesc.classList.toggle('hide');
   WriteDesc.classList.toggle('hide');
+  const SendDate = document.getElementById("Date");
+
+  SendDate.value = getCurrentDateAndTime();
 })
 
 CloseButton2.addEventListener("click", () => {
@@ -169,16 +192,16 @@ James.addEventListener("click", () => {
   password = "Surely";
   owner = "James";
 
-  const messagejamesref = collection(db, 'MessageJames')
-
   getDocs(messagejamesref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -191,16 +214,16 @@ Aira.addEventListener("click", () => {
   password = "test1";
   owner = "Aira";
 
-  const messageairaref = collection(db, 'MessageAira')
-
   getDocs(messageairaref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -213,16 +236,16 @@ Summi.addEventListener("click", () => {
   password = "test2";
   owner = "Summi";
 
-  const messagesummiref = collection(db, 'MessageSummi')
-
   getDocs(messagesummiref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -234,13 +257,14 @@ Spyke.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
   password = "test3";
   owner = "Spyke";
-  const messagespykeref = collection(db, 'MessageSpyke')
 
 getDocs(messagespykeref).then((snapshot) =>{
   const MessageData = snapshot.docs.map((doc) => {
     const data = doc.data();
 
     return `<div class="datacol">
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
     <p class="sender">${data.From}</p>
     <p class="Date">${data.Date}</p>
   </div>`
@@ -256,16 +280,16 @@ Steph.addEventListener("click", () => {
   password = "test";
   owner = "Steph";
 
-  const messagestephref = collection(db, 'MessageSteph')
-
   getDocs(messagestephref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -278,16 +302,16 @@ Edgiza.addEventListener("click", () => {
   password = "test";
   owner = "Edg";
 
-  const messageedgref = collection(db, 'MessageEdg')
-
-  getDocs(messageedgref).then((snapshot) =>{
+  getDocs(messageedgizaref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -300,16 +324,16 @@ Raymond.addEventListener("click", () => {
   password = "test";
   owner = "Raymond";
 
-  const messageraymondref = collection(db, 'MessageRaymond')
-
   getDocs(messageraymondref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -322,16 +346,16 @@ Andre.addEventListener("click", () => {
   password = "test";
   owner = "Andre";
 
-  const messageandreref = collection(db, 'MessageAndre')
-
   getDocs(messageandreref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -344,16 +368,16 @@ Kent.addEventListener("click", () => {
   password = "test";
   owner = "Kent";
 
-  const messagekentref = collection(db, 'MessageKent')
-
   getDocs(messagekentref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -366,16 +390,16 @@ Desiree.addEventListener("click", () => {
   password = "test";
   owner = "Desiree";
 
-  const messagedesireeref = collection(db, 'MessageDesiree')
-
   getDocs(messagedesireeref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -388,16 +412,16 @@ Hya.addEventListener("click", () => {
   password = "test";
   owner = "Hya";
 
-  const messagehyaref = collection(db, 'MessageHya')
-
   getDocs(messagehyaref).then((snapshot) =>{
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
   
       return `<div class="datacol">
-      <p class="sender">${data.From}</p>
-      <p class="Date">${data.Date}</p>
-    </div>`
+    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+    <p class="sender">${data.From}</p>
+    <p class="Date">${data.Date}</p>
+  </div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -412,26 +436,46 @@ function submitForm(event){
        console.log('Wrong Password');
          return false
        }
-  if(document.getElementById('password').value === password);{
+  if(document.getElementById('password').value === password){
          MessageList.classList.add("active");
-         const LetterData = document.querySelector(".datacol");
-         LetterData.addEventListener("click", () => {
-          readmessage.classList.add('active');
-         })
+         backbutton.addEventListener("click", () => {
+          MessageList.classList.remove('active');
+          PassPrompt.classList.remove('active');
+        })
+         document.querySelectorAll('.datacol').forEach((el) => el.addEventListener("click", () => {
+         const Reciever = document.getElementById("reciever");
+         const SendTo = Reciever.value;
+         const Id = document.getElementById('idnum');
+         const IdValue = Id.value
+         const docref = doc(db, `Message${SendTo}`, IdValue);
+         getDoc(docref).then((doc) => {
+            const data = doc.data();
+        
+            readmessage.innerHTML = `<p class="To">To: ${data.To}</p>
+            <div class="messagecontainer">
+              <p class="messagedata"> ${data.message}</p>
+            </div>
+            <p class="From">From: ${data.From}</p>`;
+          
+        }).catch(err => {
+          console.log(err.message);
+        })
+         readmessage.classList.add('active');
+         }))
+         }
        }
-   }
 
 passform.addEventListener('submit', submitForm);
 
-const backbutton = document.querySelector(".back");
+messageform.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-backbutton.addEventListener("click", () => {
-  MessageList.classList.remove('active');
-  PassPrompt.classList.remove('active');
-})
-
-const backmessagebutton = document.querySelector(".backmessage");
-
-backmessagebutton.addEventListener("click", () => {
-  readmessage.classList.remove('active');
+  const PersonTo = document.getElementById("PersonTo");
+  const Reciever = PersonTo.value;
+  const SendDataTo = collection(db, `Message${Reciever}`);
+  const formdata = new FormData(e.target);
+  const data = Object.fromEntries(formdata.entries());
+  addDoc(SendDataTo, data)
+    .then(() => location.reload())
+    .catch((err) => console.log(err.message));
 })

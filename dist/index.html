@@ -163,44 +163,6 @@
           </div>
         </div>
         <div class="readmessage">
-          <p class="To">To: Spyke</p>
-          <div class="messagecontainer">
-            <img src="./images/Back.png" class="backmessage" />
-            <p class="messagedata">
-              ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit, id minus? Magni, expedita sint libero fuga neque praesentium natus 
-            reprehenderit nisi iusto eveniet tempora earum labore nostrum velit officiis itaque.
-            </p>
-          </div>
-          <p class="From">From: James</p>
-        </div>
         </div>
       </section>
     <p class="ReadDesc">Read your messages</p>
@@ -210,9 +172,9 @@
         <input type="range" min="0" max="100" value="50" id="slider">
         </div>
     <div class="Message">
-      <form>
+      <form id="messageform">
         <label for="To">To:</label>
-      <select name="Person" id="Person">
+      <select name="To" id="PersonTo">
         <option value="James">James</option>
         <option value="Aira">Aira</option>
         <option value="Hya">Hya</option>
@@ -231,7 +193,7 @@
       <br>
       <br>
       <label for="From">From:</label>
-      <select name="Person" id="Person">
+      <select name="From" id="PersonFrom">
         <option value="James">James</option>
         <option value="Aira">Aira</option>
         <option value="Hya">Hya</option>
@@ -245,12 +207,13 @@
         <option value="Desiree">Desiree</option>
         <option value="Anonymous">Anonymous</option>
       </select>
-      <button class="send">Send</button>
+      <button type="submit" class="send">Send</button>
     </div>
     <img src="./images/Help.png" class="help" />
     <img src="./images/Close.png" class="close1" />
     <img src="./images/Close.png" class="close2" />
     <img src="./images/Volume.png" class="volume" />
+    <input type="hidden" name="Date" id="Date">
       </form>
 </body>
 </html>
