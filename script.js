@@ -212,3 +212,10 @@ function submitForm(event){
    }
 
 passform.addEventListener('submit', submitForm);
+
+const LetterData = document.querySelector(".datacol")
+const readmessage = document.querySelector(".readmessage")
+
+LetterData.addEventListener("click", () => {
+  readmessage.classList.add('active');
+})

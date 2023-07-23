@@ -1296,6 +1296,7 @@ label[for=password]{
   opacity: 0;
   pointer-events: none;
   transition: opacity 1s ease-in-out;
+  overflow: scroll;
 }
 
 .ListHeader{
@@ -1315,15 +1316,79 @@ label[for=password]{
   border-bottom: 2.75px solid black;
 }
 
-.letternum, .sender, .Date{
+.datacol{
+  display: flex;
+  border-bottom: 2.75px solid black;
+  cursor: pointer;
+}
+
+.letternumlabel, .senderlabel, .Datelabel, .letternum, .sender, .Date{
   color: black;
   font-size: 20px;
 }
 
-.sender{
+.senderlabel{
   margin-left: 50px;
 }
 
+.Datelabel{
+  margin-left: 248px;
+}
+
+.sender{
+  margin-left: 55px;
+}
+
 .Date{
-  margin-left: 263px;
+  margin-left: 215px;
+}
+
+.datacol:hover{
+ background-color: rgba(255, 255, 255, 1);
+}
+
+label[for=From]{
+  font-size: 25px;
+}
+
+.From, .To{
+  font-size: 30px;
+  color: black;
+}
+
+.readmessage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 720px;
+  height: 600px;
+  z-index: 5;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 25px 25px 25px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.messagecontainer{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(221, 221, 221, 0.595);
+  border-radius: 10px;
+  width: 670px;
+  height: 420px;
+  padding: 5px 5px 5px 5px;
+  overflow-y: scroll;
+}
+
+.messagedata{
+  font-size: 18px;
+  color: black;
+}
+
+.readmessage.active{
+  opacity: 1;
+  pointer-events: all;
 }
