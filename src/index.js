@@ -277,7 +277,7 @@ getDocs(messagespykeref).then((snapshot) =>{
 
 Steph.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "SorryStephIamInARush";
+  password = "StephenAlphonsusVillamon";
   owner = "Steph";
 
   getDocs(messagestephref).then((snapshot) =>{
