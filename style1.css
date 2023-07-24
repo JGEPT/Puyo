@@ -74,6 +74,7 @@
     border-radius: 3px;
     transform: rotate(90deg);
     letter-spacing: 1.2px;
+    color: white;
   }
 
   #number:before{
@@ -132,6 +133,10 @@
     opacity: 0;
     transition: opacity 0.5s ease-out;
     color: white;
+  }
+
+  .start{
+    cursor: pointer;
   }
 
   .bg, .bgletter, .start{
@@ -1206,6 +1211,7 @@
   height: 420px;
   padding: 5px 5px 5px 5px;
   color: black;
+  font-size: 20px;
 }
 
 #PersonTo, .option, .select, #PersonFrom{
@@ -1386,7 +1392,7 @@ label[for=From]{
 }
 
 .messagedata{
-  font-size: 18px;
+  font-size: 20px;
   color: black;
 }
 

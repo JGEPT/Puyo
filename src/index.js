@@ -211,7 +211,7 @@ James.addEventListener("click", () => {
 
 Aira.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test1";
+  password = "AirBlazing";
   owner = "Aira";
 
   getDocs(messageairaref).then((snapshot) =>{
@@ -233,7 +233,7 @@ Aira.addEventListener("click", () => {
 
 Summi.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test2";
+  password = "Arnold Joseph Najera Jr.";
   owner = "Summi";
 
   getDocs(messagesummiref).then((snapshot) =>{
@@ -255,7 +255,7 @@ Summi.addEventListener("click", () => {
 
 Spyke.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test3";
+  password = "barking_boyfriendnipia";
   owner = "Spyke";
 
 getDocs(messagespykeref).then((snapshot) =>{
@@ -277,7 +277,7 @@ getDocs(messagespykeref).then((snapshot) =>{
 
 Steph.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "SorryStephIamInARush";
   owner = "Steph";
 
   getDocs(messagestephref).then((snapshot) =>{
@@ -299,7 +299,7 @@ Steph.addEventListener("click", () => {
 
 Edgiza.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "ChineseBookLover69";
   owner = "Edg";
 
   getDocs(messageedgizaref).then((snapshot) =>{
@@ -321,7 +321,7 @@ Edgiza.addEventListener("click", () => {
 
 Raymond.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "StraightAlphaMale";
   owner = "Raymond";
 
   getDocs(messageraymondref).then((snapshot) =>{
@@ -343,7 +343,7 @@ Raymond.addEventListener("click", () => {
 
 Andre.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "Minor";
   owner = "Andre";
 
   getDocs(messageandreref).then((snapshot) =>{
@@ -365,7 +365,7 @@ Andre.addEventListener("click", () => {
 
 Kent.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "Homophobic";
   owner = "Kent";
 
   getDocs(messagekentref).then((snapshot) =>{
@@ -387,7 +387,7 @@ Kent.addEventListener("click", () => {
 
 Desiree.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "ThumbsUp";
   owner = "Desiree";
 
   getDocs(messagedesireeref).then((snapshot) =>{
@@ -409,7 +409,7 @@ Desiree.addEventListener("click", () => {
 
 Hya.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "test";
+  password = "???????";
   owner = "Hya";
 
   getDocs(messagehyaref).then((snapshot) =>{
