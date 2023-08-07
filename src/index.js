@@ -69,7 +69,7 @@ const messageairaref = collection(db, 'MessageAira');
 const messagesummiref = collection(db, 'MessageSummi');
 const messagespykeref = collection(db, 'MessageSpyke');
 const messagestephref = collection(db, 'MessageSteph');
-const messageedgizaref = collection(db, 'MessageEdg');
+const messageedgizaref = collection(db, 'MessageEdgiza');
 const messageraymondref = collection(db, 'MessageRaymond');
 const messageandreref = collection(db, 'MessageAndre');
 const messagekentref = collection(db, 'MessageKent');
@@ -193,11 +193,13 @@ James.addEventListener("click", () => {
   owner = "James";
 
   getDocs(messagejamesref).then((snapshot) =>{
+    let count = 0;
     const MessageData = snapshot.docs.map((doc) => {
       const data = doc.data();
+      count++;
   
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
+      return `<div class="datacol" value="${count}">
+    <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
     <input type="hidden" name="reciever" id="reciever" value="${data.To}">
     <p class="sender">${data.From}</p>
     <p class="Date">${data.Date}</p>
@@ -215,15 +217,17 @@ Aira.addEventListener("click", () => {
   owner = "Aira";
 
   getDocs(messageairaref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -237,15 +241,17 @@ Summi.addEventListener("click", () => {
   owner = "Summi";
 
   getDocs(messagesummiref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -259,15 +265,17 @@ Spyke.addEventListener("click", () => {
   owner = "Spyke";
 
 getDocs(messagespykeref).then((snapshot) =>{
+  let count = 0;
   const MessageData = snapshot.docs.map((doc) => {
     const data = doc.data();
+    count++;
 
-    return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
   })
   info.innerHTML = MessageData.join("\n");
 }).catch(err => {
@@ -281,15 +289,17 @@ Steph.addEventListener("click", () => {
   owner = "Steph";
 
   getDocs(messagestephref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -303,15 +313,17 @@ Edgiza.addEventListener("click", () => {
   owner = "Edg";
 
   getDocs(messageedgizaref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -325,15 +337,17 @@ Raymond.addEventListener("click", () => {
   owner = "Raymond";
 
   getDocs(messageraymondref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -347,15 +361,17 @@ Andre.addEventListener("click", () => {
   owner = "Andre";
 
   getDocs(messageandreref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -369,15 +385,17 @@ Kent.addEventListener("click", () => {
   owner = "Kent";
 
   getDocs(messagekentref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -391,15 +409,17 @@ Desiree.addEventListener("click", () => {
   owner = "Desiree";
 
   getDocs(messagedesireeref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -413,15 +433,17 @@ Hya.addEventListener("click", () => {
   owner = "Hya";
 
   getDocs(messagehyaref).then((snapshot) =>{
-    const MessageData = snapshot.docs.map((doc) => {
-      const data = doc.data();
-  
-      return `<div class="datacol">
-    <input type="hidden" name="idnum" id="idnum" value="${doc.id}">
-    <input type="hidden" name="reciever" id="reciever" value="${data.To}">
-    <p class="sender">${data.From}</p>
-    <p class="Date">${data.Date}</p>
-  </div>`
+    let count = 0;
+  const MessageData = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    count++;
+
+    return `<div class="datacol" value="${count}">
+  <input type="hidden" name="idnum" id="idnum${count}" value="${doc.id}">
+  <input type="hidden" name="reciever" id="reciever" value="${data.To}">
+  <p class="sender">${data.From}</p>
+  <p class="Date">${data.Date}</p>
+</div>`
     })
     info.innerHTML = MessageData.join("\n");
   }).catch(err => {
@@ -443,11 +465,13 @@ function submitForm(event){
           PassPrompt.classList.remove('active');
         })
          document.querySelectorAll('.datacol').forEach((el) => el.addEventListener("click", () => {
+         let index = el.getAttribute('value')
          const Reciever = document.getElementById("reciever");
          const SendTo = Reciever.value;
-         const Id = document.getElementById('idnum');
-         const IdValue = Id.value
+         const Id = document.getElementById(`idnum${index}`);
+         const IdValue = Id.value;
          const docref = doc(db, `Message${SendTo}`, IdValue);
+         console.log(IdValue);
          getDoc(docref).then((doc) => {
             const data = doc.data();
         
@@ -478,4 +502,5 @@ messageform.addEventListener('submit', (e) => {
   addDoc(SendDataTo, data)
     .then(() => location.reload())
     .catch((err) => console.log(err.message));
+  document.querySelector(".send").disabled = true;
 })
