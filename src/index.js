@@ -237,7 +237,7 @@ Aira.addEventListener("click", () => {
 
 Summi.addEventListener("click", () => {
   PassPrompt.classList.toggle('active');
-  password = "Arnold Joseph Najera Jr.";
+  password = "Mayor Derama";
   owner = "Summi";
 
   getDocs(messagesummiref).then((snapshot) =>{
